@@ -44,6 +44,12 @@ public class BukkitUtils {
         return color + dashes + message + color + dashes;
     }
 
+    public static String dashedChatMessage(String message, String c, ChatColor dashColor, ChatColor messageColor) {
+        message = " " + message + " ";
+        String dashes = Strings.repeat(c, (ChatPaginator.GUARANTEED_NO_WRAP_CHAT_PAGE_WIDTH - ChatColor.stripColor(message).length() - 2) / (c.length() * 2));
+        return dashColor + dashes + ChatColor.RESET + messageColor + message + ChatColor.RESET + dashColor + dashes;
+    }
+
     public static Vector blockToVector(Block block) {
         return block.getLocation().toVector();
     }
