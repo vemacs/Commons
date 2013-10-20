@@ -20,6 +20,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>tc.oc</groupId>
+            <artifactId>commons-core</artifactId>
+            <version>0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>org.bukkit</groupId>
             <artifactId>bukkit</artifactId>
             <version>1.6.4-R0.1-SNAPSHOT</version>
