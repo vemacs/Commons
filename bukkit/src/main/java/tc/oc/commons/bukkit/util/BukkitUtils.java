@@ -21,7 +21,7 @@ public class BukkitUtils {
 
     /** Makes strings have pretty colors */
     public static String colorize(String s) {
-        return s.replace('&', '\u00A7').replace('`', '\u00A7');
+        return ChatColor.translateAlternateColorCodes('&', ChatColor.translateAlternateColorCodes('`', s));
     }
 
     public static List<String> colorizeList(List<String> list) {
