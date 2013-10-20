@@ -1,7 +1,8 @@
-name: ${name}
+name: ${plugin.prefix}
 version: ${version}
 description: ${description}
 author: Overcast Network
 website: ${url}
 main: ${plugin.mainClass}
 prefix: ${plugin.prefix}
+loadbefore: [Channels]
