@@ -18,6 +18,14 @@
         <plugin.mainClass>tc.oc.commons.bukkit.CommonsPlugin</plugin.mainClass>
     </properties>
 
+    <repositories>
+        <repository>
+            <name>Bukkit repository</name>
+            <id>bukkit-repo</id>
+            <url>http://repo.bukkit.org/content/groups/public</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <dependency>
             <groupId>tc.oc</groupId>
