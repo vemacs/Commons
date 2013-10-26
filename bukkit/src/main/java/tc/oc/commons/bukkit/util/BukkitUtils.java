@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import com.google.common.base.Strings;
 import org.bukkit.*;
 import org.bukkit.block.Block;
 import org.bukkit.inventory.ItemFactory;
@@ -14,6 +13,7 @@ import org.bukkit.potion.PotionEffectType;
 import org.bukkit.util.ChatPaginator;
 import org.bukkit.util.Vector;
 
+import com.google.common.base.Strings;
 import com.google.common.collect.ImmutableMap;
 
 public class BukkitUtils {
@@ -39,9 +39,13 @@ public class BukkitUtils {
     }
 
     public static String dashedChatMessage(String message, String c, ChatColor color) {
+        return dashedChatMessage(message, c, color.toString());
+    }
+
+    public static String dashedChatMessage(String message, String c, String dashFormatting) {
         message = " " + message + " ";
         String dashes = Strings.repeat(c, (ChatPaginator.GUARANTEED_NO_WRAP_CHAT_PAGE_WIDTH - ChatColor.stripColor(message).length() - 2) / 2);
-        return color + dashes + message + color + dashes;
+        return dashFormatting + dashes + message + dashFormatting + dashes;
     }
 
     public static String dashedChatMessage(String message, String c, ChatColor dashColor, ChatColor messageColor) {
