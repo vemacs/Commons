@@ -7,7 +7,7 @@
     <groupId>tc.oc</groupId>
     <artifactId>commons</artifactId>
     <packaging>pom</packaging>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1.0</version>
 
     <modules>
         <module>core</module>
